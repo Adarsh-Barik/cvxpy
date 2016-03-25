@@ -27,7 +27,7 @@ if [[ "$DISTRIB" == "conda" ]]; then
     conda update --yes conda
 
     # install libgfortran for conda - adarsh
-    conda install --yes python=$TRAVIS_PYTHON_VERSION libgfortran
+    #conda install --yes python=$TRAVIS_PYTHON_VERSION libgfortran
 
     # Configure the conda environment and put it in the path using the
     # provided versions
