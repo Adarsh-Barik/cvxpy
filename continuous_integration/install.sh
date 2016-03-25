@@ -26,6 +26,9 @@ if [[ "$DISTRIB" == "conda" ]]; then
     export PATH=/home/travis/miniconda/bin:$PATH
     conda update --yes conda
 
+    # install libgfortran for conda - adarsh
+    conda install --yes python=$TRAVIS_PYTHON_VERSION libgfortran
+
     # Configure the conda environment and put it in the path using the
     # provided versions
     conda create -n testenv --yes python=$PYTHON_VERSION pip nose \
